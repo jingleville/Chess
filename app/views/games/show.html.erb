@@ -1,0 +1,16 @@
+<h1> show </h1>
+<h3> User 1: <%= @game.user_w_name %> </h3>
+<h3> User 2: <%= @game.user_b_name %> </h3>
+
+<div class="board">
+	<% letters = ('A'..'H').to_a %>
+	<% 64.times do |i|%>
+		<% i = i.divmod(8) %>
+		<% (i[0] + i[1]).even? ? color = 'white' : color = 'black' %>
+		<div class="<%= letters[i[0]] + (i[1]+1).to_s%> square <%= color %>">
+			<%= letters[i[0]] + (i[1]+1).to_s %>
+			<%# тут добавлю условный @game.field[i].value чтобы если фигура есть - она тянула картиночку, а если нет - просто пустая ячейка %>
+		</div>
+	<% end %>
+</div>
+
