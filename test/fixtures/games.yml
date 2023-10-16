@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id          :integer          not null, primary key
+#  active_user :string
+#  field       :string
+#  game_end    :boolean
+#  user_b_name :string
+#  user_w_name :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
