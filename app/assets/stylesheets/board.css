@@ -1,0 +1,24 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0px;
+  width: 80%;
+  border: solid;
+  border-color: black;
+}
+
+.square {
+    aspect-ratio : 1 / 1;
+    width: auto;
+    border: solid;
+}
+
+.black {
+    background-color: black;
+    border-color: black;
+}
+
+.white {
+    background-color: white;
+    border-color: white;
+}

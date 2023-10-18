@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -12,4 +13,10 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resource :accounts, only: [:show]
+
+  get "games" => "games#index"
+  get "games/:id" => "games#show"
+  # Defines the root path route ("/")
+  # root "posts#index"
+
 end

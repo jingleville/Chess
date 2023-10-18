@@ -37,4 +37,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_17_144214) do
   end
 
   add_foreign_key "accounts", "users"
+
+  create_table "games", force: :cascade do |t|
+    t.string "user_w_name"
+    t.string "user_b_name"
+    t.string "field"
+    t.boolean "game_end"
+    t.string "active_user"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
