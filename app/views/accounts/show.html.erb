@@ -1,0 +1,17 @@
+<div class="card w-auto">
+  <div class="card-header text-center"><%= current_user.username %>'s account</div>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2">ID <%= @account.id %>. User ID <%= @account.user_id %></h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn">Go somewhere</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Games: <%= @account.games %></li>
+    <li class="list-group-item">Wins: <%= @account.wins %></li>
+    <li class="list-group-item">Loses: <%= @account.loses %></li>
+    <li class="list-group-item">Draws: <%= @account.draws %></li>
+  </ul>
+  <div class="card-footer text-muted">Created: <%= @account.created_at %></div>
+</div>
