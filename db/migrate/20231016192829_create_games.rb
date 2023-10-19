@@ -1,11 +1,11 @@
 class CreateGames < ActiveRecord::Migration[7.1]
   def change
     create_table :games do |t|
-      t.string  :user_w_name # временное решение, чтобы обкатывать
-      t.string  :user_b_name # временное решение, чтобы обкатывать
-      t.string  :field
-      t.boolean :game_end
-      t.string  :active_user
+      t.string     :field
+      t.boolean    :game_end
+      t.string     :active_user
+      t.references :user_1
+      t.references :user_2
 
       t.timestamps
 

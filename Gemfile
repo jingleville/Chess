@@ -67,7 +67,6 @@ group :test do
 end
 
 gem "annotate", "~> 3.2"
+gem 'whenever', require: false
 
-
-# ------------------------------------------------------
 gem 'devise'
