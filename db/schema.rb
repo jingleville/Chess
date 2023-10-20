@@ -22,6 +22,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_17_144214) do
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
+  create_table "games", force: :cascade do |t|
+    t.string "user_w_name"
+    t.string "user_b_name"
+    t.string "field"
+    t.boolean "game_end"
+    t.string "active_user"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -37,15 +47,4 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_17_144214) do
   end
 
   add_foreign_key "accounts", "users"
-
-  create_table "games", force: :cascade do |t|
-    t.string "user_w_name"
-    t.string "user_b_name"
-    t.string "field"
-    t.boolean "game_end"
-    t.string "active_user"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
